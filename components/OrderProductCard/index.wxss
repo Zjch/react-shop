@@ -1,0 +1,27 @@
+@import '/assets/css/common.wxss';
+.wrapper .image_box {
+  width: 100px;
+  height: 100px;
+  background: #000;
+}
+.wrapper .info_box {
+  margin-left: 5px;
+  justify-content: space-between;
+  padding: 5px;
+  padding-right: 0;
+}
+.wrapper .pro_title {
+  font-size: 16px;
+  font-weight: bold;
+}
+.wrapper .price_box {
+  justify-content: space-between;
+}
+.wrapper .price_box .price {
+  font-size: 16px;
+  color: #f00;
+}
+.wrapper .price_box .num {
+  font-size: 14px;
+  color: #999;
+}

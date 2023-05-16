@@ -1,0 +1,6 @@
+
+<view class="mask" wx:if="{{isShow}}" bind:tap="close"></view>
+<view class="panels_wrapper {{isShow ? 'show' : 'hide'}}">
+    <view class="panels_title">{{title}}</view>
+    <slot name="content"></slot>
+</view>

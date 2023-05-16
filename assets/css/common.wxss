@@ -1,0 +1,30 @@
+@import '/assets/font/iconfont.wxss';
+.flex {
+  display: flex;
+}
+.flex-1 {
+  flex: 1;
+}
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+.b-gray {
+  background: #f9f9f9;
+}
+.btn {
+  font-size: 14px;
+  height: 50px;
+}
+.btn-black {
+  background: #000;
+  color: #fff;
+}
+.border-dashed {
+  border: 1px dashed #000;
+}

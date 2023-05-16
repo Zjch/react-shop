@@ -1,0 +1,40 @@
+@font-face {
+  font-family: 'iconfont';
+  src: url('data:font/woff2;charset=utf-8;base64,d09GMgABAAAAAAUoAA0AAAAAC1AAAATSAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP0ZGVE0cGh4GYACCWhEICokohyQLFAABNgIkAxoEIAWFAgeBGxtQCcgeh+kGezaQJEdvofKh38zezJCNAMnGiHdTc1kxp+LQnpKKqHydaYj/uu2rP1mAKQUeWEBHWWzNxMdJAleg////fi5PJUS9k/xDWY1vYpbEkmvbTt+AVD5JxJJZqRxCgUol0iLH6ppqJT6PuBYAAsD9dbUNAPBq3B5OUec+pwCQABTBGBAcgAK4ArmhA3rRawBmos8nP5rFAFC6GdrXDTl6ZuHUh08fzUwJKwDrUAAQUBlEAIy3+fNfZwSGAPw4bQAmBhT9vnz45cOP5nDgw6cQ1+Pz2D0G9999VoEsAEE4EwAK0P49BNyMjKAAwAgAbAAPkBMgHStz5yQYhsdwm8/COZ1+t05nRHTOuFINjyhKhaHNoKslUDaZBCrQthAmCNStvMjeZ7wze/7iReukTlQ5VsOsnfCyDvM2LFFduRsPjkijfKx6sjYfOu6J5lmcaQQ//n70/RH37jH8mAcP+LEPH6KEKTrQZCCkKtJghCIZ4EdjmcAiJjpPUNafMH7hRmf6/MVOqixypM1bJ2UsWCIxdakrmqYzKTPNQTMz5m9W1m3Yom7MXLhe2bRug7o1RY0xeLnctPTMjBHV42xRGjquHNNOqCcFvGpKaL0zWUw0axskItdZQtvdcfM2OeLJLVKKKSMvV+tRo8Y6YwfHoWuAJeqNdrWkDbWYG11ICN2/r9y7pz14oD58OFS7dko5fT1086x65kb+pp2MqINvxtZ+GIqueX/gdYRPitVEwJroZR8M1XZHdy16kfeXqQseTvc41J6eru456xat/sXzw7Q4825bt6i/zsHJXMJUI8Ldz71ik3BSQfP3eHR0QA6U6zF561bFGPBHpOvqTOnbJ8ub5iYFWd45c7xZxJjGIX9EOt7Gc+rUvEY634AqrfX8tHlJl+ad5efw8xYkXor9TvWHJtTeEt2qcFP1TS1jam+5KF6o7627rL6vzrS25+v46i+r663/cwSh1vJXtPXjQo8am/SCgGOPd08dtgThVF+PVsj+rfcC35zkhbqJdb4OnewWonyc8NPuJtKpmvFrGsmvTda5neN9PbPuA+GoVnm2ffO///LuToJdOaXYE+48+XX0+n22uFbhFrHNm8fmGchx5Pktnauv9vbyru4lmCfsO+H8Ct82O7YkxVsjwXlEMdbwfvSSY80AACAAAjXbSD7V0uE3A8/hEH2+pmM3u8kGAzCgAIDAYRU/qQAA7GHVhMuV1iw8hS6aGsPeKA0BGGXjAQAFmJgAYSgY2LwAgZhdnRAIg0FA6eUCY6ASOMoy0OEdhwgGT8GkfjoczrNnFhhSRgC1AICI1AEos1hgIpUSOIoGOpL1ECHSZTCJ8W43Xq3kobsK2dLJWDFLUIax2HyZSpXImZHhtZH69K2+vJiAGobsQzFMtlwjFUlXAX8HHLf6+AgbI1uFSvmdQU010gTuKyy9aaMmTQm9zSXNh6/xJpVGydWMTJYjKEeFUsWCenWxXrYiRUoFleV/pEC2TLJG8EqquHJUbjNZzrkToX7/Wn07oP9TdQTI6395ZdpprLGcniONZI5pw22iLaex+kyr74Q9jYkhGC9F0FDCCEd0JILoha5ZWQ3P4NxZ4mWXIRZypjcs0CFDjtXyP0eDbHTV0H9irb4kN7Bm8SNsAwIA') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-a-Addoutline-outlined:before {
+  content: "\e6ea";
+}
+
+.icon-a-Shoppingcart-outlined:before {
+  content: "\e6ff";
+}
+
+.icon-Add-outlined:before {
+  content: "\e6e8";
+}
+
+.icon-Home-outlined:before {
+  content: "\e6e9";
+}
+
+.icon-Random-outlined:before {
+  content: "\e6f3";
+}
+
+.icon-User-outlined:before {
+  content: "\e70e";
+}

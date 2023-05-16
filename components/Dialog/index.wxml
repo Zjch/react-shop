@@ -1,0 +1,11 @@
+<block wx:if="{{isShow}}">
+    <view class="mask" bind:tap="close"></view>
+
+    <view class="dialog_wrapper">
+        <view class="dialog_title" wx:if="{{title && title != ''}}">{{title}}</view>
+        <view class="dialog_content">
+            <slot name="content" ></slot>
+        </view>
+        <slot name="footer" class="dialog_footer"></slot>
+    </view>
+</block>

@@ -1,0 +1,48 @@
+.container {
+  height: 100vh;
+}
+.head {
+  width: 100%;
+  height: 30px;
+  background: #FF6666;
+}
+.catlog {
+  width: 100%;
+}
+.catlog .classify {
+  width: 100px;
+  height: 100%;
+}
+.catlog .card {
+  height: 100%;
+}
+.footer {
+  height: 60px;
+  padding: 0 15px;
+  background: #fff;
+  border-top: 0.5px solid #eee;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer .cart {
+  width: 32px;
+  height: 32px;
+  font-size: 32px;
+}
+.footer .price {
+  margin-left: 5px;
+  font-size: 14px;
+}
+.footer .price text {
+  color: #f00;
+  font-size: 18px;
+  font-weight: bold;
+}
+.footer .submit {
+  height: 32px;
+  font-size: 14px;
+  background: #FF6666;
+  color: #fff;
+  padding: 0 15px;
+  border-radius: 2px;
+}

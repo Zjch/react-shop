@@ -1,0 +1,40 @@
+@import '/assets/css/common.wxss';
+.container {
+  padding: 15px;
+}
+.container .pro_list {
+  padding-bottom: 10px;
+}
+.container .pro {
+  margin-bottom: 5px;
+}
+.container .coupon_box {
+  padding: 15px 0;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+}
+.container .remake_box {
+  font-size: 14px;
+  padding: 15px 0;
+}
+.container .remake_box textarea {
+  margin-top: 15px;
+  border: 1px solid #f9f9f9;
+  width: auto;
+  height: 50px;
+  padding: 15px;
+}
+.container .submit {
+  height: 46px;
+  background: #FF6666;
+  color: #fff;
+  border-radius: 2px;
+  font-size: 16px;
+  font-weight: bold;
+}
+.line {
+  width: 100%;
+  height: 0.5px;
+  background-color: #f9f9f9;
+}

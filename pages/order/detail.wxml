@@ -1,0 +1,14 @@
+<!--pages/order/detail.wxml-->
+<view class="head">订单已完成</view>
+
+<view class="content">
+    <view class="pro_list">
+        <block wx:for="{{5}}" wx:key="index">
+            <view class="pro_item">
+                <product />
+            </view>
+        </block>
+    </view>
+
+    <view class=""></view>
+</view>

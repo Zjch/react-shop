@@ -1,0 +1,18 @@
+@import '/assets/css/common.wxss';
+.list_wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+.tab_box {
+  height: 50px;
+  border-bottom: 1px solid #f9f9f9;
+}
+.tab_box .tab {
+  font-size: 14px;
+  color: #999;
+}
+.tab_box .tab_active {
+  font-size: 16px;
+  color: #000;
+}

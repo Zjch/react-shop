@@ -1,0 +1,55 @@
+<view class="wrapper">
+    <view class="chunk">
+        <scroll-view scroll-y style="height:100%">
+            <view class=" card_box">
+                <view class="item_card" bind:tap="addItem">
+                    <view class="add_card flex-center border-dashed">
+                        <text class="iconfont icon-Add-outlined"></text>
+                    </view>
+                </view>
+                <block wx:for="{{10}}" wx:key="index">
+                    <view class="item_card flex">
+                        <view class="image_box"></view>
+                        <view class="flex-1 flex item_right">
+                            <view class="title">红烧肉</view>
+                            <view class="information flex flex-column">
+                                <view class="sales">已售: 0</view>
+                                <view class="price_box flex">
+                                    <view class="price">¥50</view>
+                                    <view class="operate">
+                                        <view class="">+</view>
+                                    </view>
+                                </view>
+                            </view>
+                        </view>
+                    </view>
+                </block>
+            </view>
+        </scroll-view>
+    </view>
+</view>
+
+
+<dialog id="dialog" title="添加商品">
+    <view slot="content" class="dialog_content">
+        <view class="good_img flex-center border-dashed" bind:tap="chooseImg">
+            <text class="iconfont icon-Add-outlined"></text>
+        </view>
+        <view class="good_box flex">
+            <text>商品名称: </text>
+            <input class="flex-1" placeholder="请输入商品名" value="{{name}}" data-key="name" bindinput="bindinput" />
+        </view>
+        <view class="good_box flex">
+            <text>商品价格(元): </text>
+            <input class="flex-1" type="digit" placeholder="请输入商品价格" value="{{price}}" data-key="price" bindinput="bindinput" />
+        </view>
+        <view class="good_box flex">
+            <text>商品库存: </text>
+            <input class="flex-1" type="number" placeholder="请输入商品库存" value="{{stock}}" data-key="stock" bindinput="bindinput" />
+        </view>
+    </view>
+    <view slot="footer" class="flex btns">
+        <view class="flex-center flex-1 btn" bind:tap="closeDialog">关闭</view>
+        <view class="flex-center flex-1 btn btn-black" bind:tap="confirm">确定</view>
+    </view>
+</dialog>

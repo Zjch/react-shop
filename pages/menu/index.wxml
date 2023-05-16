@@ -1,0 +1,26 @@
+
+<view class="flex-column container">
+    <view class="head" style="height:{{navHeight + 90}}px">
+
+
+    </view>
+
+    <view class="catlog flex-1 flex">
+        <view class="classify b-gray">
+            <classify isAdmin="{{isAdmin}}" list="{{classifyList}}" bind:add="addClassify" bind:handleItem="handleItem"></classify>
+        </view>
+        <view class="card flex-1">
+            <card classify="{{checkItem}}" isAdmin="{{isAdmin}}"></card>
+        </view>
+    </view>
+
+    <view class="footer flex">
+        <view class="footer-left flex">
+            <view class="cart iconfont icon-a-Shoppingcart-outlined" bind:tap="handelCart"></view>
+            <view class="price flex-center">合计: <text>¥0</text></view>
+        </view>
+        <view class="submit flex-center" bind:tap="submit">去下单</view>
+    </view>
+</view>
+
+<panels id="cartPanels" title="购物车"></panels>

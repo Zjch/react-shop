@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "classify": "./components/classify/index",
+    "card": "./components/card/index"
+  },
+  "disableScroll": true,
+  "navigationStyle": "custom"
+}

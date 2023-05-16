@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "product": "../../components/OrderProductCard/index"
+  },
+  "navigationBarTitleText": "结算"
+}

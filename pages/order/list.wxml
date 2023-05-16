@@ -1,0 +1,11 @@
+<!--pages/order/list.wxml-->
+<view class="list_wrapper">
+    <view class="tab_box flex">
+        <view class="{{tabIndex == 0 ? 'tab_active' : 'tab'}} flex-1 flex-center" data-index="0" bind:tap="handleTab">已完成</view>
+        <view class="{{tabIndex == 1 ? 'tab_active' : 'tab'}} flex-1 flex-center" data-index="1" bind:tap="handleTab">未完成</view>
+    </view>
+
+    <view class="flex-1">
+        <scroll-view scroll-y="{{true}}" style="height: 100%"></scroll-view>
+    </view>
+</view>

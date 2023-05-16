@@ -1,0 +1,21 @@
+
+<view class="container">
+    <view class="pro_list">
+        <block wx:for="{{5}}">
+            <view class="pro">
+                <product></product>
+            </view>
+        </block>
+    </view>
+    <view class="line"></view>
+    <view class="coupon_box flex">
+        <view class="">使用优惠</view>
+        <view class="">- ¥10</view>
+    </view>
+    <view class="line"></view>
+    <view class="remake_box">
+        <view class="title">备注:</view>
+        <textarea ></textarea>
+    </view>
+    <view class="submit flex-center">确认支付(¥50)</view>
+</view>

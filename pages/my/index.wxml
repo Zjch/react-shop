@@ -1,0 +1,11 @@
+<!--pages/my/index.wxml-->
+<view class="head flex-center" style="padding-top: {{navHeight}}px">
+    <view class="avatar_box">
+        <image src="{{avatar}}" />
+        <button open-type="chooseAvatar" bindchooseavatar="bindchooseavatar"></button>
+    </view>
+</view>
+
+<view class="content">
+    <view class="item">我的订单</view>
+</view>

@@ -1,0 +1,34 @@
+@import '/assets/css/common.wxss';
+.head {
+  background: #FF6666;
+  height: 150px;
+}
+.head .avatar_box {
+  width: 80px;
+  height: 80px;
+  background: #fff;
+  border-radius: 4px;
+  position: relative;
+  overflow: hidden;
+}
+.head .avatar_box image {
+  width: 80px;
+  height: 80px;
+}
+.head .avatar_box button {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  top: 0;
+  left: 0;
+}
+.content {
+  padding: 0 20px;
+}
+.content .item {
+  height: 60px;
+  border-bottom: 1px solid #f9f9f9;
+  line-height: 60px;
+  font-size: 16px;
+}
