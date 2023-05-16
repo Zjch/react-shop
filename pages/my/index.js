@@ -1,4 +1,5 @@
 // pages/my/index.js
+import pathModel from '../../model/path.model';
 import { navHeight, jumpTo } from '../../utils/utils'
 Page({
 
@@ -48,6 +49,11 @@ Page({
    */
   onUnload() {
 
+  },
+
+  toOrder(e){
+    const { type } = e.currentTarget.dataset
+    jumpTo(`${pathModel.orderListPage}?type=${type}`)
   },
 
   /**

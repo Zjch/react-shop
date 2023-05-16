@@ -1,5 +1,5 @@
 // pages/menu/index.js
-import { myMenu } from '../../api/api.model';
+import { myMenu, getProduct, confirmOrder } from '../../api/api.model';
 import pathModel from '../../model/path.model';
 import { navHeight, jumpTo } from '../../utils/utils';
 Page({
@@ -16,6 +16,9 @@ Page({
     },
     isShow: false,
     checkItem: {},
+    productList: [],
+    cartList: [],
+    totalPrice: 0,
   },
 
   /**
@@ -23,6 +26,9 @@ Page({
    */
   onLoad(options) {
     console.log('page onload');
+    wx.showLoading({
+      title: '加载中',
+    })
     this.init()
   },
 
@@ -35,9 +41,31 @@ Page({
           text: item.menuName
         }
       })
+      this.getProduct(classifyList[0].id)
       this.setData({
         classifyList,
+        checkItem: classifyList[0]
       })
+    })
+  },
+
+  // 获取商品
+  getProduct(menuId){
+    getProduct({
+      menuId
+    }).then(res => {
+      let productList = res.data.map(item => {
+        return {
+          ...item,
+          price: Number((item.price/1000).toFixed(2)) 
+        }
+      })
+      this.setData({
+        productList
+      })
+      wx.hideLoading()
+    }).catch(err => {
+      console.log(err);
     })
   },
 
@@ -75,13 +103,68 @@ Page({
 
   handleItem(e){
     const { item } = e.detail
+    wx.showLoading({
+      title: '加载中',
+    })
+    this.getProduct(item.id)
     this.setData({
       checkItem: item,
     })
   },
 
+  // 下单
   submit(){
-    jumpTo(pathModel.checkoutPage)
+    let cartList = this.data.cartList
+    let items = cartList.map(item => {
+      return {
+        goodsNumber: 1,
+        itemId: item.id,
+      }
+    })
+    let params = {
+      items,
+      
+      orderMethod: '2',
+      remark: '1',
+      tableNumber: '1',
+    }
+    confirmOrder(params).then(res => {
+      console.log(res);
+    })
+    // jumpTo(pathModel.checkoutPage)
+  },
+
+  addCart(e){
+    const { item } = e.detail
+    // console.log(item);
+    const cartList = this.data.cartList
+    const index = cartList.findIndex(e => e.id == item.id)
+    if(index != -1){
+      wx.showToast({
+        title: '购物车已有此商品',
+        icon: 'none'
+      })
+      return
+    }
+    cartList.push(item)
+    this.setData({
+      cartList
+    }, () => {
+      this.calculate()
+    })
+    wx.showToast({
+      title: '添加成功',
+      icon: 'none'
+    })
+  },
+
+  // 计算购物车
+  calculate(){
+    const cartList = this.data.cartList
+    const totalPrice = cartList.reduce((acc, item) => item.price + acc, 0)
+    this.setData({
+      totalPrice
+    })
   },
 
   addClassify(e){

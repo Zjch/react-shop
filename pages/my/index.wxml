@@ -7,5 +7,6 @@
 </view>
 
 <view class="content">
-    <view class="item">我的订单</view>
+    <view class="item" data-type="shop" bind:tap="toOrder">店铺订单</view>
+    <view class="item" data-type="buy" bind:tap="toOrder">我的订单</view>
 </view>

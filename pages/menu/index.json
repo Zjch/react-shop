@@ -1,7 +1,8 @@
 {
   "usingComponents": {
     "classify": "./components/classify/index",
-    "card": "./components/card/index"
+    "card": "./components/card/index",
+    "product": "../../components/OrderProductCard/index"
   },
   "disableScroll": true,
   "navigationStyle": "custom"

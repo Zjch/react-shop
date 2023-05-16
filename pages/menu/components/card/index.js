@@ -1,5 +1,5 @@
 // pages/menu/components/card/index.js
-import { uploadImg } from '../../../../api/api.model'
+import { uploadImg, addProduct } from '../../../../api/api.model'
 Component({
   /**
    * 组件的属性列表
@@ -42,11 +42,23 @@ Component({
       this.selectComponent('#dialog').open()
     },
 
+    // 关闭
+    closeDialog(){
+      this.selectComponent('#dialog').close()
+    },
+
     bindinput(e){
       const { key } = e.currentTarget.dataset
       const { value } = e.detail
       this.setData({
         [key]: value
+      })
+    },
+
+    addCart(e){
+      const { item } = e.currentTarget.dataset
+      this.triggerEvent('addCart', {
+        item
       })
     },
 
@@ -61,16 +73,30 @@ Component({
         camera: 'back',
         success(res) {
           uploadImg(res.tempFiles[0]).then(res => {
-            that.setData({
-              icon
-            })
+            // that.setData({
+            //   icon
+            // })
           })
         }
       })
     },
 
     confirm(){
-      console.log(this.data);
+      // console.log(this.data);
+      const { name, price, stock } = this.data
+      const params = {
+        icon: '',
+        id: '',
+        menuId: this.data.classify.id,
+        name,
+        price: price * 1000,
+        stock,
+      }
+
+      console.log(params);
+      addProduct(params).then(res => {
+        console.log(res);
+      })
     }
   }
 })

@@ -7,17 +7,17 @@
                         <text class="iconfont icon-Add-outlined"></text>
                     </view>
                 </view>
-                <block wx:for="{{10}}" wx:key="index">
+                <block wx:for="{{list}}" wx:key="index">
                     <view class="item_card flex">
                         <view class="image_box"></view>
                         <view class="flex-1 flex item_right">
-                            <view class="title">红烧肉</view>
+                            <view class="title">{{item.name}}</view>
                             <view class="information flex flex-column">
-                                <view class="sales">已售: 0</view>
+                                <view class="sales">已售: {{item.salesVolumes}}</view>
                                 <view class="price_box flex">
-                                    <view class="price">¥50</view>
+                                    <view class="price">¥{{item.price}}</view>
                                     <view class="operate">
-                                        <view class="">+</view>
+                                        <view class="add-cart flex-center" data-item="{{item}}" bind:tap="addCart"><text class="iconfont icon-Add-outlined"></text></view>
                                     </view>
                                 </view>
                             </view>

@@ -37,11 +37,18 @@
 }
 .wrapper .item_card .item_right .information .price_box {
   justify-content: space-between;
+  align-items: center;
 }
 .wrapper .item_card .item_right .information .price_box .price {
   color: #f00;
   font-size: 18px;
   font-weight: bold;
+}
+.operate .add-cart {
+  border: 1px solid #000;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
 }
 .dialog_content {
   padding: 0 15px;
@@ -56,4 +63,8 @@
 .dialog_content .good_box text {
   color: #333;
   margin-right: 5px;
+}
+.btns {
+  width: 100%;
+  border-top: 1px solid #000;
 }

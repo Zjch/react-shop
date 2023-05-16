@@ -10,17 +10,27 @@
             <classify isAdmin="{{isAdmin}}" list="{{classifyList}}" bind:add="addClassify" bind:handleItem="handleItem"></classify>
         </view>
         <view class="card flex-1">
-            <card classify="{{checkItem}}" isAdmin="{{isAdmin}}"></card>
+            <card classify="{{checkItem}}" list="{{productList}}" isAdmin="{{isAdmin}}" bind:addCart="addCart"></card>
         </view>
     </view>
 
     <view class="footer flex">
         <view class="footer-left flex">
             <view class="cart iconfont icon-a-Shoppingcart-outlined" bind:tap="handelCart"></view>
-            <view class="price flex-center">合计: <text>¥0</text></view>
+            <view class="price flex-center">合计: <text>¥{{totalPrice}}</text></view>
         </view>
         <view class="submit flex-center" bind:tap="submit">去下单</view>
     </view>
 </view>
 
-<panels id="cartPanels" title="购物车"></panels>
+<panels id="cartPanels" title="购物车">
+    <view slot="content">
+        <scroll-view scroll-y="{{true}}" style="max-height: 500px;">
+            <view class="cart_wrapper">
+                <view wx:for="{{cartList}}" wx:key="index" class="" style="margin-bottom: 15px;">
+                    <product name="{{item.name}}" price="{{item.price}}"></product>
+                </view>
+            </view>
+        </scroll-view>
+    </view>
+</panels>

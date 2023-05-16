@@ -1,11 +1,13 @@
 // pages/order/list.js
+import { myOrder, shopOrder } from '../../api/api.model';
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    tabIndex: 0
+    tabIndex: 0,
+    type: ''
   },
 
   handleTab(e){
@@ -20,7 +22,27 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
+    wx.setNavigationBarTitle({
+      title: options.type == 'shop' ? '我的店铺订单' : '我的订单'
+    })
+    this.setData({
+      type: options.type,
+    })
 
+    this.init(options.type)
+  },
+
+  async init(type){
+    let data = null
+    if(type == 'shop'){
+      data = await shopOrder({
+        isHistory: this.data.tabIndex + ''
+      })
+    }else{
+      data = await myOrder({})
+    }
+
+    console.log(data);
   },
 
   /**

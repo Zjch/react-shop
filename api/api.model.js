@@ -47,4 +47,38 @@ export const addMyMenu = (data) => request('/menu', 'post', data, {
 })
 
 
+// 商品
+export const addProduct = (data) => request('/dish', 'post', data, {
+    'Authorization': loginService.token
+}, {
+    token: true
+})
+
+export const getProduct = (data) => request('/dish', 'get', data, {
+    'Authorization': loginService.token
+}, {
+    token: true
+})
+
+
 // 商家类目
+
+
+// 订单
+export const confirmOrder = (data) => request('/order', 'post', data, {
+    'Authorization': loginService.token
+}, {
+    token: true
+})
+
+export const myOrder = data => request('/order/buyerOrder', 'get', data, {
+    'Authorization': loginService.token
+}, {
+    token: true
+})
+
+export const shopOrder = data => request('/order/shopOrder', 'get', data, {
+    'Authorization': loginService.token
+}, {
+    token: true
+})

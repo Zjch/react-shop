@@ -23,6 +23,13 @@ const request = async (url, method, data, header, options) => {
                 // console.log(res);
                 if(res.statusCode == 200){
                     resolve(res)
+                }else if(res.statusCode == 401) {
+                    // token失效
+                    const param = {
+                        url, method, data, header, options
+                    }
+                    loginService.login()
+                    return request(param)
                 }else{
                     reject(res)
                 }

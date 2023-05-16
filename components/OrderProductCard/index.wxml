@@ -2,9 +2,9 @@
 <view class="wrapper flex">
     <view class="image_box"></view>
     <view class="info_box flex-1 flex-column">
-        <view class="pro_title">名字</view>
+        <view class="pro_title">{{name}}</view>
         <view class="price_box flex">
-            <view class="price">¥50</view>
+            <view class="price">¥{{price}}</view>
             <view class="num">x 1</view>
         </view>
     </view>
